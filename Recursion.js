@@ -91,6 +91,26 @@
 //     }
 //     return Fibonacci(num-2)+Fibonacci(num-1)
 // }
+
+// input: number
+// output: the result of multiplying that number by each number between itself and 1
+// recursive in: number - 1 
+// recursive out: the result of ^^
+
+// function factorial(n) {
+//   if (n <= 1){
+//     return 1
+//   }
+
+//   return factorial(n-1) * n 
+// }
+
+// console.log(factorial(5))
+
+// input: maze, 
+// output: string
+
+
 let maze = [
     [' ', ' ', ' ', '*', ' ', ' ', ' '],
     ['*', '*', ' ', '*', ' ', '*', ' '],
@@ -143,4 +163,5 @@ function Maze(maze, x=0, y=0, visited=[], steps=''){
      }
 }
 }}   
-console.log(Maze(mySmallMaze))
+
+Maze(maze)
