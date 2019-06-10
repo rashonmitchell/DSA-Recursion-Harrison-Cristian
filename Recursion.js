@@ -19,12 +19,42 @@
 //     if(exponent<0){
 //         return 'exponent should be >=0'
 //     }
-//     else if(exponent===0){
+//     if(exponent===0){
 //         return 1
 //     }
-//     else{
-//         return base * powerCalculator(base,exponent-1)
-//     }  
+    
+//     return base * powerCalculator(base,exponent-1)
 
 // }
 // console.log(powerCalculator(10,4))
+
+// input: a string
+// output: the string reversed
+// recursive input: string minus the last letter
+// recursive output: the new last letter
+
+// function stringReverse(string) {
+//   if (string.length === 0) {
+//     return ''
+//   }
+//   if (string.length === 1) {
+//     return string
+//   }
+
+//   return string[string.length-1] + stringReverse(string.slice(0, string.length-1))
+// }
+
+// console.log(stringReverse('cat'))
+
+// input: number nth triangular number 
+// output: (number of dots composing a triangle with n dots on a side and is equal to the sum of the n number from 1 to n)
+
+function calcTriNumber(nthNum) {
+  if (nthNum === 1) {
+    return 1
+  }
+
+  return nthNum + calcTriNumber(nthNum - 1)
+}
+
+console.log(calcTriNumber(7))
