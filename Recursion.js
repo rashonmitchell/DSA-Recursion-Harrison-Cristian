@@ -111,57 +111,77 @@
 // output: string
 
 
-let maze = [
-    [' ', ' ', ' ', '*', ' ', ' ', ' '],
-    ['*', '*', ' ', '*', ' ', '*', ' '],
-    [' ', ' ', ' ', ' ', ' ', ' ', ' '],
-    [' ', '*', '*', '*', '*', '*', ' '],
-    [' ', ' ', ' ', ' ', ' ', ' ', 'e']
-];
-let mySmallMaze = [
-    [' ', ' ', ' '],
-    [' ', '*', ' '],
-    [' ', ' ', 'e']
-];
+// let maze = [
+//     [' ', ' ', ' ', '*', ' ', ' ', ' '],
+//     ['*', '*', ' ', '*', ' ', '*', ' '],
+//     [' ', ' ', ' ', ' ', ' ', ' ', ' '],
+//     [' ', '*', '*', '*', '*', '*', ' '],
+//     [' ', ' ', ' ', ' ', ' ', ' ', 'e']
+// ];
+// let mySmallMaze = [
+//     [' ', ' ', ' '],
+//     [' ', '*', ' '],
+//     [' ', ' ', 'e']
+// ];
 
-function Maze(maze, x=0, y=0, visited=[], steps=''){
-    if (maze[y][x]==='e'){
-        return steps
-    }
-     visited.push(`[${y}][${x}]`)
-     if (y+1 <maze.length){
-         if( maze[y+1][x] !=='*' && !visited.includes(`[${y+1}][${x}]`)){
+// function Maze(maze, x=0, y=0, visited=[], steps=''){
+//     if (maze[y][x]==='e'){
+//         return steps
+//     }
+//      visited.push(`[${y}][${x}]`)
+//      if (y+1 <maze.length){
+//          if( maze[y+1][x] !=='*' && !visited.includes(`[${y+1}][${x}]`)){
 
-             if(Maze(maze, x, y+1, [...visited], steps+'D')){
-                 return console.log('Path to exit '+Maze(maze, x, y+1, [...visited], steps+'D'))
-             }
-         }
-     }
-     if (x+1 < maze[y].length){
-         if(maze[y][x+1] !=='*' && !visited.includes(`[${y}][${x+1}]`)){
+//              if(Maze(maze, x, y+1, [...visited], steps+'D')){
+//                  return console.log('Path to exit '+Maze(maze, x, y+1, [...visited], steps+'D'))
+//              }
+//          }
+//      }
+//      if (x+1 < maze[y].length){
+//          if(maze[y][x+1] !=='*' && !visited.includes(`[${y}][${x+1}]`)){
 
-            if(Maze(maze, x+1, y, [...visited], steps+'R')){
-                return (console.log('Path to exit '+Maze(maze, x+1, y, [...visited], steps+'R')))
-            }
-         }
-     }
-     if(y-1 >=0){
-         if(maze[y-1][x] !=='*' && !visited.includes(`[${y-1}][${x}]`)){
+//             if(Maze(maze, x+1, y, [...visited], steps+'R')){
+//                 return (console.log('Path to exit '+Maze(maze, x+1, y, [...visited], steps+'R')))
+//             }
+//          }
+//      }
+//      if(y-1 >=0){
+//          if(maze[y-1][x] !=='*' && !visited.includes(`[${y-1}][${x}]`)){
 
-            if(Maze(maze, x, y-1, [...visited], steps+'U')){
-                return console.log('Path to exit '+Maze(maze, x, y-1, [...visited], steps+'U'))
-            }
+//             if(Maze(maze, x, y-1, [...visited], steps+'U')){
+//                 return console.log('Path to exit '+Maze(maze, x, y-1, [...visited], steps+'U'))
+//             }
 
-     }
-     if(x-1 >= 0){
-        if(maze[y][x-1] !=='*' && !visited.includes(`[${y}][${x-1}]`)) {
+//      }
+//      if(x-1 >= 0){
+//         if(maze[y][x-1] !=='*' && !visited.includes(`[${y}][${x-1}]`)) {
 
-            if(Maze(maze, x-1, y, [...visited], steps+'L')){
-                return console.log('Path to exit '+Maze(maze, x-1, y, [...visited], steps+'L'))
-            }
+//             if(Maze(maze, x-1, y, [...visited], steps+'L')){
+//                 return console.log('Path to exit '+Maze(maze, x-1, y, [...visited], steps+'L'))
+//             }
 
-     }
-}
-}}   
+//      }
+// }
+// }}   
 
-Maze(maze)
+// Maze(maze)
+
+// // input is a string
+// // output is a list containing all the unique combination of the letters
+// // for each recursion the input is the word and the letter not used
+// // for each recursion the output is the word plus another letter and the letter not used || no letter left add the key into the unique object
+// function Anagrams(str){
+//     let Unique={}
+//     function anagram(w, string){
+//         if (string===''){
+//             Unique[w]= ''
+//         }
+//         for(let i = 0 ; i<string.length; i++){
+//             anagram(w+string[i], string.slice(0,i)+string.slice(i+1))
+//         }
+//     }
+//     anagram('',str)
+//     return Object.keys(Unique)
+
+// }
+// console.log(Anagrams('east'));
