@@ -60,3 +60,34 @@
 // }
 
 // console.log(calcTriNumber(7))
+
+// // inputs are a string and a separator for the string
+// // output is a string without the separator
+
+// function stringSplitter(str, sep){
+//     if(str==''){
+//         return ''
+//     }
+//     else if(str[0]==sep){
+//         return stringSplitter(str.slice(1),sep)
+//     }
+//     return str[0] + stringSplitter(str.slice(1),sep)
+    
+// }
+
+// console.log(stringSplitter('12345672345','2'));
+
+// // input is the nth fibonacci Number
+// // output is the list of nth fibonacci sequence
+// // for each recursion the input is the remaining number of fibonacci number need to generate
+// // for each recursion the output is the fibonacci number
+
+// function Fibonacci(num){
+//     if(num==0){
+//         return 0
+//     }
+//     if (num===1){
+//         return 1
+//     }
+//     return Fibonacci(num-2)+Fibonacci(num-1)
+// }
