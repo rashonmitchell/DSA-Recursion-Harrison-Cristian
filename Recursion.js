@@ -48,13 +48,15 @@
 
 // input: number nth triangular number 
 // output: (number of dots composing a triangle with n dots on a side and is equal to the sum of the n number from 1 to n)
+// recursive input: nth triangular number - 1
+// recursive output: nth triangular number + new number 
 
-function calcTriNumber(nthNum) {
-  if (nthNum === 1) {
-    return 1
-  }
+// function calcTriNumber(nthNum) {
+//   if (nthNum === 1) {
+//     return 1
+//   }
 
-  return nthNum + calcTriNumber(nthNum - 1)
-}
+//   return nthNum + calcTriNumber(nthNum - 1)
+// }
 
-console.log(calcTriNumber(7))
+// console.log(calcTriNumber(7))
